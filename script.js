@@ -85,3 +85,16 @@ var a=(values)=>{
 
 }
 console.log(a(f));
+
+//Return all the palindromes in an array
+
+//using function
+
+var a=["hi","hello","palindrome","Not","you"]
+function palin(b){
+    for(var a=0;a<b.length;a++){
+        
+    }
+
+}
+palin(a)
