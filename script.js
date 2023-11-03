@@ -44,7 +44,7 @@ var c=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17];
     }
 })(c)
 
-//Q2.SUm of all numbers in array
+//Q3.SUm of all numbers in array
 
 //using function 
 
@@ -88,13 +88,74 @@ console.log(a(f));
 
 //Return all the palindromes in an array
 
-//using function
+//using anonymous function
 
-var a=["hi","hello","palindrome","Not","you"]
-function palin(b){
-    for(var a=0;a<b.length;a++){
-        
+
+
+const groceryshop =[{item: "Apple" , price: 25, category: "fruits"},{item: "salt" ,price: 50, category: "misc"},{item : "tomato" , price: 129, category:" nvegetables " },]
+//!without destructuring
+//!with destructuring
+const [ {item,price,secondobject},items]= groceryshop
+console. log(item);
+console. log(price);
+console.log(items.item);
+
+const arr=["guvi"]
+
+console.log("I am in palindrome question using anonymous function");
+var a=function(palin){
+    var result=[]
+    for(let i=0;i<palin.length;i++){
+        let b=palin[i].split("").reverse().join("");
+        if(b===palin[i]){
+            result.push(b);
+        }
     }
-
+    return result
 }
-palin(a)
+console.log(a(["manoj","kumar","dad"]));
+
+console.log("I am in palindrome question using IIFE function");
+
+(function(palin){
+    var result=[]
+    for(let i=0;i<palin.length;i++){
+        let b=palin[i].split("").reverse().join("");
+        if(b===palin[i]){
+            result.push(b);
+        }
+    }
+    console.log(result);
+})(["manoj","kumar","dad"])
+console.log("I am in palindrome question using arrow function");
+var a=((palin)=>{
+    var result=[]
+    for(let i=0;i<palin.length;i++){
+        let b=palin[i].split("").reverse().join("");
+        if(b===palin[i]){
+            result.push(b);
+        }
+    }
+    return result
+})
+console.log(a(["manoj","kumar","dad"]));
+var arr1=[1,3,5,7]
+var arr2=[2,4,6,8]
+var arr3=[...arr1,...arr2]
+arr3.sort()
+console.log(arr3);
+var median=(arr3.length/2)-1
+console.log(arr3[median]);
+var b=[10,20,30,40,50,60];
+console.log(b);
+var c=(function(arr){
+    var k=3
+    for(var i=0;i<k;i++){
+        arr.push(arr[i])
+    }
+    for(var i=0;i<k;i++){
+        arr.shift(arr[i])
+    }
+})
+c(b);
+console.log(b);
